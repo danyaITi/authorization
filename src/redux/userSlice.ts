@@ -2,16 +2,16 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export type User = {
    name: string,
-   email: string,
-   password: string
+   email: string ,
+   password: string 
   };
 
 interface userState{
-    user: {} | any
+    user: User | any
 }
 
 const initialState: userState = {
-    user: null,
+    user: null             
 } 
 
 const userSlice = createSlice({
@@ -24,7 +24,8 @@ const userSlice = createSlice({
         },
 
         logOut: (state) => {
-            state.user = null
+            state.user = null            
+            
         }
 
     }
